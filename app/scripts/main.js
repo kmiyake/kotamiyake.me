@@ -1,7 +1,8 @@
 $(document).ready(function() {
-  $('#owl-portfolio').owlCarousel({
+  $('.owl-carousel').owlCarousel({
     items: 3,
-    navigation: true
+    margin: 20,
+    nav: true
   });
 
   $('header .nav').on('click', 'li a', function(e) {
