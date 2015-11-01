@@ -42,27 +42,26 @@ article {
   margin-bottom: 100px;
 }
 
-/* Custom page footer */
+.home .container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+.home .container-fluid .jumbotron {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  border-radius: 0;
+  background-color: $main-color;
+  text-align: center;
+  color: #ffffff;
+}
+
 footer {
   padding-top: 19px;
-  color: #777;
   border-top: 1px solid #e5e5e5;
   text-align: center;
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  background-color: #ffffff;
-  text-align: center;
-}
-
-/* Supporting marketing content */
 .marketing {
   margin: 40px 0;
   p + h4 {
@@ -105,6 +104,10 @@ footer {
   background-color: #ffffff;
   border-bottom: 5px solid #2980b9;
   border-radius: 0;
+}
+
+.home .nav li a:focus {
+  background-color: #ffffff;
 }
 
 // Override owl carousel
