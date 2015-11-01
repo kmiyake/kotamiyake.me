@@ -1,9 +1,13 @@
 $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
+$main-color: #3498db;
+
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 
+// for < IE10
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -11,38 +15,39 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
   padding: 0.2em 0;
 }
 
-/* Space out content a bit */
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  font-family: 'Noto Sans Japanese', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
+.home header {
+  h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+    color: $main-color;
+  }
+}
+
+header,
 .marketing,
 .footer {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
+article {
+  margin-bottom: 100px;
 }
 
 /* Custom page footer */
-.footer {
+footer {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
+  text-align: center;
 }
 
 .container-narrow > hr {
@@ -51,12 +56,10 @@ body {
 
 /* Main marketing message and sign up button */
 .jumbotron {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-color: #ffffff;
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
 }
 
 /* Supporting marketing content */
@@ -70,7 +73,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 730px;
+    // max-width: 730px;
   }
 
   /* Remove the padding we set earlier */
@@ -90,4 +93,21 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+// Override bootstrap
+.home .nav li a {
+  color: $main-color;
+}
+
+.home .nav li a:hover {
+  color: #2980b9;
+  background-color: #ffffff;
+  border-bottom: 5px solid #2980b9;
+  border-radius: 0;
+}
+
+// Override owl carousel
+.owl-wrapper-outer {
+  text-align: center;
 }
